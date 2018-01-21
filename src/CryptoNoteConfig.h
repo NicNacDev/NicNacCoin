@@ -65,8 +65,8 @@ const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
 const uint32_t KEY_IMAGE_CHECKING_BLOCK_INDEX                = 0;
-const uint32_t UPGRADE_HEIGHT_V2                                = 1;
-const uint32_t UPGRADE_HEIGHT_V3                                = 2;
+const uint32_t UPGRADE_HEIGHT_V2                             = 1;
+const uint32_t UPGRADE_HEIGHT_V3                             = 2;
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
 const uint32_t UPGRADE_VOTING_WINDOW                         = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
 const uint32_t UPGRADE_WINDOW                                = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
@@ -116,7 +116,12 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
-"154.127.62.56:31739", "197.87.179.77:31739", "138.201.116.10:31739", "78.47.184.165:31739", "45.55.74.147:31739", "45.55.243.109:31739"
+"154.127.62.56:31739",
+"197.87.179.77:31739",
+"138.201.116.10:31739",
+"78.47.184.165:31739",
+"45.55.74.147:31739",
+"45.55.243.109:31739"
 };
 
 struct CheckpointData {
@@ -131,7 +136,25 @@ __attribute__((unused))
 // You may add here other checkpoints using the following format:
 // {<block height>, "<block hash>"},
 const std::initializer_list<CheckpointData> CHECKPOINTS = {
-{5000,  "9b7afbb9d6739e8f112cfe0aead4e9cef6f11a430e3877baab1d2a20164564d3"}, {10000, "6912815de15ae1ecd28ff3097fe7782f6c9e44326a361d3bbbc3f57c679e7370"}, {25000, "5d8203600c7bae0c15624bebd37c5f9340aea2e97ca90aef3b9cb06e637d1079"}, {50000, "22015dde6d83807b5e9bfd552631667e1d92356ca2f86996928b2c746a3246de"}, {75000, "b6beafa4f753a7f400623d1828503287f13ffae9a3bcb1148aef0f3a38e39be9"}, {100000,  "ac4fbb7d971fa3cc87071ddcda71a74cfa82317be0a9dbfd1b056921d168c147"}, {125000,  "fc102964792f55afb9fb2d692326da0c1bf8737bbad436eeb9e0211512ab7886"}, {150000,  "a144c3d2764228c90085dddbca13ccd177b4f7452d802cb45c3006436b033d86"}, {175000,  "e85ddb0062bf335140fffffe375ccf687bb0f7d1c998bfd5c037507d103abe3d"}, {200000,  "8233236f78e4612b65367be1073806503d465fac98c61e05ff6f885123544fc6"}, {225000,  "19fb93a4a858cb7d58cd63079dbb94495e7bae269bed591557b2a42333d9ae43"}, {250000,  "3257766ef2a8511ea5f18f5b9388ebc82307aa4bc66871cb4a2cda39c6b6b1ad"}, {275000,  "0e3b69547d37c0dffe78b4396ccc7611ec3ede92c85c206a88907781d1ee1b63"}, {300000,  "ffb170c3f1311b26d2e90b3e4a32d99564415dcfc282646d841084cc120552a9"}, {315000,  "488b5a1c3990901c3fcd52b44aeabd6255d855045cb6eaf47160e7b364c8dd0b"}, {325000,  "80aafcb4760f7dad105bca70bc12f5307c66281839e219847248126a4dc73523"}, {350000,  "364fdd98bd3a0c99f2cda914142dc306d36e2bbf57f29d521e316a2b12848ffc"}, {375000,  "c9370af84bc27e65dcfc74fd62cb2afbb70c3cfef22139b6efbaaca08d55fa6b"}, {400000,  "c51a3cf22c88d1fd4fcae10240c944ffc0e11582e268f0a9825e53bc7e2e02e6"}
+{5000, "9b7afbb9d6739e8f112cfe0aead4e9cef6f11a430e3877baab1d2a20164564d3"},
+{10000, "6912815de15ae1ecd28ff3097fe7782f6c9e44326a361d3bbbc3f57c679e7370"},
+{25000, "5d8203600c7bae0c15624bebd37c5f9340aea2e97ca90aef3b9cb06e637d1079"},
+{50000, "22015dde6d83807b5e9bfd552631667e1d92356ca2f86996928b2c746a3246de"},
+{75000, "b6beafa4f753a7f400623d1828503287f13ffae9a3bcb1148aef0f3a38e39be9"},
+{100000, "ac4fbb7d971fa3cc87071ddcda71a74cfa82317be0a9dbfd1b056921d168c147"},
+{125000, "fc102964792f55afb9fb2d692326da0c1bf8737bbad436eeb9e0211512ab7886"},
+{150000, "a144c3d2764228c90085dddbca13ccd177b4f7452d802cb45c3006436b033d86"},
+{175000, "e85ddb0062bf335140fffffe375ccf687bb0f7d1c998bfd5c037507d103abe3d"},
+{200000, "8233236f78e4612b65367be1073806503d465fac98c61e05ff6f885123544fc6"},
+{225000, "19fb93a4a858cb7d58cd63079dbb94495e7bae269bed591557b2a42333d9ae43"},
+{250000, "3257766ef2a8511ea5f18f5b9388ebc82307aa4bc66871cb4a2cda39c6b6b1ad"},
+{275000, "0e3b69547d37c0dffe78b4396ccc7611ec3ede92c85c206a88907781d1ee1b63"},
+{300000, "ffb170c3f1311b26d2e90b3e4a32d99564415dcfc282646d841084cc120552a9"},
+{315000, "488b5a1c3990901c3fcd52b44aeabd6255d855045cb6eaf47160e7b364c8dd0b"},
+{325000, "80aafcb4760f7dad105bca70bc12f5307c66281839e219847248126a4dc73523"},
+{350000, "364fdd98bd3a0c99f2cda914142dc306d36e2bbf57f29d521e316a2b12848ffc"},
+{375000, "c9370af84bc27e65dcfc74fd62cb2afbb70c3cfef22139b6efbaaca08d55fa6b"},
+{400000, "c51a3cf22c88d1fd4fcae10240c944ffc0e11582e268f0a9825e53bc7e2e02e6"}
 };
 } // CryptoNote
 
